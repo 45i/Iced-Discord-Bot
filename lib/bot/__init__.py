@@ -1,6 +1,6 @@
 from datetime import datetime
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from discord import Embed
+from discord import Embed, File
 from discord.ext.commands import Bot as BotBase
 from discord.ext import commands
 
@@ -52,8 +52,12 @@ class Bot(BotBase):
 			for name, value, inline in fields:
 				embed.add_field(name=name, value=value, inline=inline)
 			embed.set_author(name="Tindi Brown", icon_url=self.guild.icon_url)
+			embed.set_thumbnail(url=self.guild.icon_url)
+			embed.set_image(url=self.guild.icon_url)
 			await channel.send(embed=embed) 
 			embed.set_footer(text= "This is a footer") 
+
+			await channel.send(file=File("./data/images/work.jpg"))
 
 		else:
 			print("bot reconnected")
