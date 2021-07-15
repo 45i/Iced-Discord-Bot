@@ -35,7 +35,7 @@ class Bot(BotBase):
 		self.ready = False
 		self.guild = None
 		self.scheduler = AsyncIOScheduler()
-		self.bot = Bot
+		
 		self.cogs_ready = Ready()
 
 		super().__init__(
@@ -89,9 +89,7 @@ class Bot(BotBase):
 		else:
 			print("bot reconnected")
 
-	# async def on_message(self,message):
-	# 	if message.content == "+hello":
-	# 		await message.channel.send('Hey there')
+
 	def setup(self):
 		for cog in COGS:
 			self.load_extension(f"lib.cogs.{cog}")
