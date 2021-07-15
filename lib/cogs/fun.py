@@ -30,7 +30,7 @@ class Fun(Cog):
                 'Signs point to yes.',
                 'Very doubtful.',
                 'Without a doubt.']
-        await ctx.send(f'Question:{question}\nAnswer: {random.choice(response)}')
+        await ctx.send(f'Question: {question}\nAnswer: {random.choice(response)}')
     @command()
     async def dice(self, ctx):
         
