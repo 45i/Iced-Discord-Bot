@@ -62,10 +62,3 @@ class Bot(BotBase):
 		pass
 
 bot = Bot()
-
-#----after bot dev-----#
-#@client.event
-#async def on_ready():
-#	await client.change_presence(activity=discord.Game("Keeping servers Iced!"))
-#	print("Bot is connected!")
-#client.run("ODYyMzA1Mjk5NjkxMDc3NjUy.YOWaZA.CJquymH5JVFyKSmXCopmFwjVl74")
