@@ -37,7 +37,7 @@ class Fun(Cog):
         
         await ctx.send(f'you rolled a {random.randint(1, 6)}')
     @command(aliases=['fact'])
-    async def _8ball(self, ctx):
+    async def _fact(self, ctx):
 	await ctx.send(facts.random_fact())
     @command()
     async def randomno(self, ctx):
