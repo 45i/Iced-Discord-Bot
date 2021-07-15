@@ -2,6 +2,7 @@
 from discord.ext.commands import Cog
 from discord.ext.commands import command
 import random
+import py8fact as facts
 
 class Fun(Cog):
     def __init__(self, bot):
@@ -35,6 +36,9 @@ class Fun(Cog):
     async def dice(self, ctx):
         
         await ctx.send(f'you rolled a {random.randint(1, 6)}')
+    @command(aliases=['fact'])
+    async def _8ball(self, ctx):
+	await ctx.send(facts.random_fact())
     @command()
     async def randomno(self, ctx):
         await ctx.send(f'Your random number is {random.randint(1, 1000000)}')
